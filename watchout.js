@@ -3,9 +3,8 @@
 var canvasSize = {'x' : 1000, 'y' : 1000}
 var gameCanvas = 
 	d3.select(".gameCanvas")
-	  .append('svg')
-	    .attr('width', canvasSize.x)
-	    .attr('height', canvasSize.y);
+	  .attr('width', canvasSize.x)
+	  .attr('height', canvasSize.y);
 
 
 //ENEMY STUFF
@@ -15,7 +14,7 @@ var enemyNum = 10;
 var enemyUpdate = function(data){
   //retrieve all current enemy data
   var enemies = gameCanvas.selectAll('.enemy')
-  		.data(data, function(d){ return d.id });
+  	.data(data, function(d){ return d.id });
 
 
   //make circles
@@ -51,17 +50,15 @@ var enemyArray = function(enemyNumber){
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
+//HERO STUFF
+var dragmove = function() {
+  d3.select(this)
+    .attr('cx', d3.event.sourceEvent.pageX-10)
+    .attr('cy', d3.event.sourceEvent.pageY-55);
+}
+var drag = d3.behavior.drag()
+    .on("drag", dragmove);
+d3.select('.hero').call(drag);
 
 
 

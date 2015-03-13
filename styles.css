@@ -3,12 +3,12 @@
 /* Note: an asteroid image is included in this repo.
 Feel free to use it if you like. */
 
-text {
-  font: bold 48px monospace;
-}
-
 .enemy {
   fill: black;
+}
+
+.hero {
+  fill: green;
 }
 
 .update {
