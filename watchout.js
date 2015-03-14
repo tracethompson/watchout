@@ -12,7 +12,7 @@ d3.select('.hero').attr('cy', canvasSize.y/2);
 
 //ENEMY STUFF
 //number of enemies
-var enemyNum = 10;
+var enemyNum = 50;
 //update enemy location
 var enemyUpdate = function(data){
   //retrieve all current enemy data
@@ -31,7 +31,7 @@ var enemyUpdate = function(data){
   //update position
   enemies
     .transition()
-      .duration(2000)
+      .duration(1000)
 	  	.attr('cx', function(d){ return d.x})
 	  	.attr('cy', function(d){ return d.y});		
 
@@ -89,7 +89,7 @@ var enemyArray = function(enemyNumber){
 var dragmove = function() {
   d3.select(this)
     .attr('cx', d3.event.sourceEvent.pageX-10)
-    .attr('cy', d3.event.sourceEvent.pageY-45);
+    .attr('cy', d3.event.sourceEvent.pageY-80);
 }
 var drag = d3.behavior.drag()
     .on("drag", dragmove);

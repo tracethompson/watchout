@@ -18,3 +18,11 @@ Feel free to use it if you like. */
 .exit {
   fill: brown;
 }
+
+
+.scoreboard{
+	font-family: Helvetica;
+	font-size: 1em;
+	margin-left: 50%;
+	margin-top: 50px;
+}
